@@ -1,9 +1,10 @@
-require File.join(File.dirname(__FILE__),'node')
+require File.join(File.dirname(__FILE__), 'node')
+
 class Layer
   attr_accessor :nodes, :width, :height
 
-  def initialize(width,height)
-    @height, @width  = height, width
+  def initialize(width, height)
+    @height, @width = height, width
     init_nodes
   end
 
@@ -17,7 +18,7 @@ class Layer
 
   def sample_init(samples)
     init_nodes
-    id=0
+    id = 0
     height.times do |h|
       width.times do |w|
         init_wgts = samples[(rand*(samples.size-1)).round]
@@ -33,7 +34,7 @@ class Layer
   end
 
   def mqe
-    (node_qe.inject(0) {|sum,entry| sum+entry})/node_qe.size.to_f
+    (node_qe.inject(0) {|sum, entry| sum + entry}) / node_qe.size.to_f
   end
 
   def node_rows
@@ -45,5 +46,4 @@ class Layer
     end
     node_rows
   end
-	
 end

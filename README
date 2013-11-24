@@ -7,7 +7,9 @@ pure ruby code.
 ## Testing SOMPAK_4R
 
   1. Create the ruby binding
-      +  cd sompak_4r; ruby extconf.rb; make
+      +  cd sompak_4r
+      +  ruby extconf.rb
+      +  make
       +  cp sompak4r.so ../som/lib
       +  cd ..
       +  ruby test_som.rb

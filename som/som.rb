@@ -1,7 +1,8 @@
-require File.join(File.dirname(__FILE__),'lib/sompak4r')
-require File.join(File.dirname(__FILE__),'lib/vis_helpers')
-require File.join(File.dirname(__FILE__),'lib/layer')
-require File.join(File.dirname(__FILE__),'lib/stat_helpers')
+require File.join(File.dirname(__FILE__), 'lib/sompak4r')
+require File.join(File.dirname(__FILE__), 'lib/vis_helpers')
+require File.join(File.dirname(__FILE__), 'lib/layer')
+require File.join(File.dirname(__FILE__), 'lib/stat_helpers')
+
 class SOM
   include SomPak
   include Vis_SOM
@@ -85,5 +86,4 @@ private
   def node_contents
     nodes.map {|nd| {:pos=>nd.pos, :wgts=>nd.weights, :members=>nd.bucket} }
   end
-
 end
